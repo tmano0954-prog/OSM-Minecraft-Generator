@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft OSM World Engine</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div id="sidebar">
+    <h1>OSM World Tool</h1>
+    <div class="control-group">
+      <label for="version">Target Game Version:</label>
+      <select id="version">
+        <option value="1.12.2">Minecraft 1.12.2 (Forge/Vanilla)</option>
+        <option value="1.7.10">Minecraft 1.7.10 (Forge/Vanilla)</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label class="checkbox-group">
+        <input type="checkbox" id="spawnCars" checked>
+        <span>Spawn Voxel Vehicles</span>
+      </label>
+    </div>
+    <div class="control-group">
+      <label class="checkbox-group">
+        <input type="checkbox" id="renderMapSigns" checked>
+        <span>Render Wikimedia Guide Signs</span>
+      </label>
+    </div>
+    <div class="coords-display" id="bboxCoords">Select location on map...</div>
+    <button id="generateBtn">Generate & Download (.ZIP)</button>
+    <div id="status">Ready</div>
+  </div>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/js/map-selector.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
